@@ -1,21 +1,26 @@
-package Interface;
 
+package Interface;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*; 
 
 public class ComparableAnwendung {
 	public static void main(String args[]) {
 		
-		List<Person> personenliste = new ArrayList<Person>();
+		List<Gebaeude> gebaeudeliste = new ArrayList<Gebaeude>();
 		
-		personenliste.add(new Person(1, 1.55, "Müller"));
-		personenliste.add(new Person(2, 1.95, "Schulze"));
-		personenliste.add(new Person(3, 1.80, "Lehmann"));
+		gebaeudeliste.add(new Gebaeude(1, 15.0, "Betriebsgebaeude"));
+		gebaeudeliste.add(new Gebaeude(2, 21.0, "Wohngebaeude"));
+		gebaeudeliste.add(new Gebaeude(3, 18.0, "Verteilstation"));
 		
+
 		// Sortierung durchfuehren
+		Collections.sort(gebaeudeliste);
 		
-		// hier soll eine bereits in Java vorhandene Methode aufgerufen werden
 		
-		System.out.println("Personen = "+personenliste.toString());
-		}
+		System.out.println("Gebaeude = "+ gebaeudeliste.toString());
+		
+	}
+
+	
 }
